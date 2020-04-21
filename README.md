@@ -1,5 +1,5 @@
 <h1 align="center">
-  <img src="https://avatars1.githubusercontent.com/u/29598503?v=3&s=256" alt="Bastet">
+  <img src="https://raw.githubusercontent.com/almejo/bastet-snap/0a9ca1d356a45734d5a88a4f292f6dcfb9e12272/bastet.svg?v=3&s=256" alt="Bastet">
   <br />
   Bastet
 </h1>
@@ -7,11 +7,13 @@
 <p align="center"><b>This is the snap for Bastet</b>, <i>“Single-line elevator pitch for your amazing snap”</i>. It works on Ubuntu, Fedora, Debian, and other major Linux
 distributions.</p>
 
+<!-- Uncomment and modify this when you are provided a build status badge
 <p align="center">
-<a href="https://build.snapcraft.io/user/snapcrafters/fork-and-rename-me"><img src="https://raw.githubusercontent.com/almejo/bastet-snap/0a9ca1d356a45734d5a88a4f292f6dcfb9e12272/bastet.svg" alt="Bastet"></a>
+<a href="https://build.snapcraft.io/user/snapcrafters/fork-and-rename-me"><img src="https://build.snapcraft.io/badge/snapcrafters/fork-and-rename-me.svg" alt="Snap Status"></a>
 </p>
+-->
 
-![my-snap-name](bastet-screenshot-1.png?raw=true "bastet")
+![my-snap-name](bastet-screenshot-1.png?raw=true "")
 
 <p align="center">Published for <img src="https://raw.githubusercontent.com/anythingcodes/slack-emoji-for-techies/gh-pages/emoji/tux.png" align="top" width="24" /> with 💝 by Snapcrafters</p>
 
