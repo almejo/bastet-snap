@@ -1,15 +1,36 @@
-name: my-snap-name # you probably want to 'snapcraft register <name>'
-version: '0.1' # just for humans, typically '1.2+git' or '1.3.2'
-summary: Single-line elevator pitch for your amazing snap # 79 char long summary
+name: bastet
+base: core18
+version: '0.43.2'
+summary: 'Bastet is a ncurses Tetris clone with a bastard algorithm.'
 description: |
-  This is my-snap's description. You have a paragraph or two to tell the
-  most important story about your snap. Keep it under 100 words though,
-  we live in tweetspace and your description wants to look good in the snap
-  store.
+  Bastet stands for "bastard tetris", and is a simple ncurses-based Tetris(R) clone 
+  for Linux. Unlike normal Tetris(R), however, Bastet does not choose your next 
+  brick at random. Instead, Bastet uses a special algorithm designed to choose the worst
+  brick possible. As you can imagine, playing Bastet can be a very frustrating experience!
+grade: stable
+confinement: strict
 
-confinement: devmode # use 'strict' once you have the right plugs and slots
+apps:
+  bastet:
+    command: bastet
+    environment:
+      HOME: $SNAP_USER_COMMON
+
 
 parts:
-  my-part:
-    # See 'snapcraft plugins'
-    plugin: nil
+  bastet:
+    plugin: autotools
+    source: https://github.com/fph/bastet
+    source-type: git
+    override-build: |
+      make
+      mkdir -p ${SNAPCRAFT_PART_INSTALL}/usr/bin/
+      cp bastet ${SNAPCRAFT_PART_INSTALL}/usr/bin/
+    build-packages:
+      - build-essential
+      - libboost-all-dev
+      - libboost1.65-all-dev
+      - libncurses5-dev
+    stage-packages:
+      - libpsm-infinipath1
+      - libboost-program-options1.65.1

@@ -1,0 +1,13 @@
+[Desktop Entry]
+Version=1.0.2
+Type=Application
+Name=Bastet
+Comment=Bastet
+GenericName=Bastet
+Exec=bastet
+TryExec=bastet
+Icon=${SNAP}/meta/gui/bastet.png
+Terminal=true
+Path=/usr/games/
+Categories=Game;BlocksGame;
+StartupNotify=true
