@@ -16,10 +16,9 @@ apps:
     environment:
       HOME: $SNAP_USER_COMMON
 
-
 parts:
   bastet:
-    plugin: autotools
+    plugin: make
     source: https://github.com/fph/bastet
     source-type: git
     override-build: |
@@ -27,6 +26,7 @@ parts:
       mkdir -p ${SNAPCRAFT_PART_INSTALL}/usr/bin/
       cp bastet ${SNAPCRAFT_PART_INSTALL}/usr/bin/
     build-packages:
+      - liberror-perl
       - build-essential
       - libboost-all-dev
       - libboost1.65-all-dev
