@@ -1,6 +1,7 @@
 name: bastet
 base: core18
 version: '0.43.2'
+license: 'GPL-3.0'
 summary: 'Bastet is a ncurses Tetris clone with a bastard algorithm.'
 description: |
   Bastet stands for "bastard tetris", and is a simple ncurses-based Tetris(R) clone 
